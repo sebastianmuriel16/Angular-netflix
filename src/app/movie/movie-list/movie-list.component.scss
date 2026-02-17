@@ -1,0 +1,14 @@
+.container-movies {
+  min-height: 40vh; // ocupa 40% de la altura de la ventana
+  max-height: 50vh; // no excede la mitad
+  overflow-x: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.container-movies::-webkit-scrollbar {
+  height: 6px;
+}
+.container-movies::-webkit-scrollbar-thumb {
+  background: rgba(255,255,255,0.3);
+  border-radius: 3px;
+}

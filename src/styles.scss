@@ -1,0 +1,12 @@
+/* Global styles */
+@import "bootswatch/dist/cyborg/bootstrap.min.css";
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
