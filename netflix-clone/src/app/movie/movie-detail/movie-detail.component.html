@@ -1,0 +1,31 @@
+<div class="d-flex justify-content-center mt-5">
+    <div class="card shadow-lg border-0" style="max-width: 900px;">
+        <div class="row g-0">
+            <!-- Imagen ocupa todo el lado izquierdo -->
+            <div class="col-md-4">
+                <img [src]="movie()?.backdrop_path ? tmdbService.getImageUrl(movie()?.poster_path!, 'w500') : 'assets/img-not-available-w500.png'"
+                    alt="{{ movie()?.title }}" class="img-fluid h-100 rounded-start" style="object-fit: cover;">
+            </div>
+
+            <!-- Información a la derecha -->
+            <div class="col-md-8">
+                <div class="card-body">
+                    <h2 class="card-title mb-2">{{ movie()?.title }}</h2>
+                    <h6 class="text-muted mb-3">{{ movie()?.original_title }}</h6>
+
+                    <div class="d-flex flex-wrap gap-2 mb-3">
+                        <span class="badge bg-info">Release: {{ movie()?.release_date | date:'mediumDate' }}</span>
+                        <span class="badge bg-secondary">Language: {{ movie()?.original_language | uppercase }}</span>
+                        <span class="badge bg-success">Rating: {{ movie()?.vote_average }}/10 ⭐</span>
+                        <span class="badge bg-warning text-dark">Votes: {{ movie()?.vote_count }}</span>
+                        <span class="badge bg-primary">Popularity: {{ movie()?.popularity }}</span>
+                        <span *ngIf="movie()?.adult" class="badge bg-danger">+18</span>
+                    </div>
+
+                    <h5>Overview</h5>
+                    <p class="card-text">{{ movie()?.overview }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

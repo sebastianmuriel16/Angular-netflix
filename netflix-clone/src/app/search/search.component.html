@@ -1,0 +1,10 @@
+@if(movies()){
+<div class="movies-grid">
+    @for(movie of movies(); track movie.id){
+    <app-movie-card [movie]="movie" />
+    }
+</div>
+}
+@else {
+<p>No movies found</p>
+}

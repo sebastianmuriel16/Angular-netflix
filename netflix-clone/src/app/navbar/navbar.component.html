@@ -1,0 +1,32 @@
+<nav class="navbar navbar-expand-lg sticky-top bg-dark border-bottom" data-bs-theme="dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" [routerLink]="['/']">
+            <img ngSrc="assets/logo/netflix.png" priority="" alt="logo-netflix" width="100" height="30.45"
+                class="d-inline-block align-text-top">
+        </a>
+        <button class="navbar-toggler" type="button" (click)="toggleMenu()"> <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse justify-content-between" [class.show]="menuOpen()"
+            id="navbarSupportedContent">
+            <div>
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" [routerLink]="['/']">Home</a>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <form class="d-flex input-group" role="search">
+                    <span class="input-group-text">
+                        <fa-icon icon="search"></fa-icon>
+                    </span>
+                    <input class="form-control me-2" name="search" placeholder="Search" type="search"
+                        [value]="searchTerm()" (change)="onSearch($event)">
+                </form>
+            </div>
+
+        </div>
+
+    </div>
+</nav>
