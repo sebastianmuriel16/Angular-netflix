@@ -1,4 +1,4 @@
-import { Component, signal, inject, computed, effect } from '@angular/core';
+import { Component, inject, computed } from '@angular/core';
 import { MovieCardComponent } from '../movie/movie-card/movie-card.component';
 import { ActivatedRoute } from '@angular/router';
 import { TmdbService } from '../service/tmdb.service';
